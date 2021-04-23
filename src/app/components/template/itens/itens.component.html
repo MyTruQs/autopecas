@@ -1,0 +1,39 @@
+<section class="itens">
+    <div class="lista">
+        <h3><b>Lista de Produtos:</b></h3>
+    </div>
+    <!--lista-->
+
+    <div class="container">
+        <div class="produtos">
+            <div *ngFor="let item of itens, let i = index" class="produto-uni">
+
+                <mat-tab-group dynamicHeight>
+                    <mat-tab>
+                        <div class="example-small-box mat-elevation-z4">
+                            <a [routerLink]="['/editar',i]">
+                                Codigo {{item.codigo}} <br>
+                                Peça {{item.peca}}
+                             Estoque {{item.estoque}} /{{item.maxEstoque}}
+                               min Estoque  ({{item.minEstoque}}) </a>
+                        </div>
+                    </mat-tab>
+
+                </mat-tab-group>
+
+
+            </div>
+            <!--produto-uni-->
+        </div>
+        <!--produtos-->
+
+
+
+
+    </div>
+    <!--container-->
+
+
+
+</section>
+<!--itens-->
